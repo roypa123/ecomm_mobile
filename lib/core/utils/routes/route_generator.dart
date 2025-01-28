@@ -9,13 +9,14 @@ class RouteGenerator {
     // var args = settings.arguments; //* ARG PARAMS
 
     switch (settings.name) {
-      // case RouteConstants.routeInitial:
-      //   return _buildRoute(
-      //       RouteConstants.routeInitial,
-      //       BlocProvider<AuthBloc>(
-      //         create: (_) => sl<AuthBloc>(),
-      //         child: const LoginScreen(),
-      //       ));
+      case RouteConstants.routeInitial:
+        return _buildRoute(
+          RouteConstants.routeInitial,
+          BlocProvider<SplashCubit>(
+            create: (_) => sl<SplashCubit>(),
+            child: const SplashScreen(),
+          ),
+        );
 
       // case RouteConstants.routeLoginScreen:
       //   return _buildRoute(

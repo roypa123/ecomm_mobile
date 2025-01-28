@@ -4,22 +4,21 @@ GetIt sl = GetIt.instance;
 
 Future<void> injectionContainer() async {
   // await _initNetworkServices();
-  // await _initSembastServices();
   // await _initAuth();
   // await _initMain();
   // await _initProfileBloc();
+  await _initSplash();
+}
+
+Future<void> _initSplash() async {
+  sl.registerFactory(
+    () => SplashCubit(),
+  );
 }
 
 // Future<void> _initNetworkServices() async {
 //   sl.registerLazySingleton<NetWorkBaseServices>(() => NetworkServices());
 // }
-
-// Future<void> _initSembastServices() async {
-//   sl.registerLazySingleton<LocalBaseServices1>(() => SembastServices1());
-// }
-
-
-
 
 // Future<void> _initAuth() async {
 //   sl
@@ -48,5 +47,5 @@ Future<void> injectionContainer() async {
 // }
 
 Future<void> initiliazeObjects() async {
- // await sl.get<LocalBaseServices1>().initialize();
+  // await sl.get<LocalBaseServices1>().initialize();
 }

@@ -3,7 +3,6 @@ enum InputFields {
   password,
   confirmPassword,
   loginPassword,
-
   oldPassword,
   changePassword,
   name,
