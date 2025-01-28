@@ -49,7 +49,7 @@ class AuthRepoImpl implements AuthRepo {
       );
       return const Right(null);
     } on ServerException catch (e) {
-      return Left(ServerFailure(message: e.message!, statusCode: e.statusCode));
+      return Left(ServerFailure(message: e.message, statusCode: e.statusCode));
     }
   }
 

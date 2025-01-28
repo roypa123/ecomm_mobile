@@ -1,4 +1,5 @@
 import 'package:ecomm_mobile/firebase_options.dart';
+// import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,6 +13,7 @@ Future<void> initEcommApp() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  // FirebaseAppCheck.instance.setTokenAutoRefreshEnabled(true);
   await injectionContainer();
   await initiliazeObjects();
   await ScreenUtil.ensureScreenSize();

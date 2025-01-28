@@ -6,6 +6,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/widgets.dart';
 
 import '../../../../core/core.dart';
+import '../models/user_model.dart';
 
 
 
@@ -42,9 +43,6 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   final FirebaseFirestore _cloudStoreClient;
   final FirebaseStorage _dbClient;
 
-  
- 
-
   @override
   Future<void> signUp({
     required String email,
@@ -58,8 +56,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
       );
 
       await userCred.user?.updateDisplayName(fullName);
-      //await userCred.user?.updatePhotoURL(kDefaultAvatar);
-      //await _setUserData(_authClient.currentUser!, email);
+      await _setUserData(_authClient.currentUser!, email);
     } on FirebaseAuthException catch (e) {
       throw ServerException(
         message: e.message ?? 'Error Occurred',
@@ -72,6 +69,17 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
         statusCode: '505',
       );
     }
+  }
+
+   Future<void> _setUserData(User user, String fallbackEmail) async {
+    await _cloudStoreClient.collection('users').doc(user.uid).set(
+          LocalUserModel(
+            uid: user.uid,
+            email: user.email ?? fallbackEmail,
+            fullName: user.displayName ?? '',
+            profilePic: user.photoURL ?? '',
+          ).toMap(),
+        );
   }
 
 }
