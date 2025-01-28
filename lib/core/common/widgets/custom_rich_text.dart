@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:stoblo/core/configs/styles/fonts/plus_jakarta_sans.dart';
+
+import '../../core.dart';
+
 
 class CustomRichText extends StatelessWidget {
   final String textOne;

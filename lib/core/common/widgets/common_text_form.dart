@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:stoblo/core/common/widgets/common_icon_widget.dart';
-import 'package:stoblo/core/configs/constants/app_vectors.dart';
-import 'package:stoblo/core/configs/enums/text_input_enums.dart';
-import 'package:stoblo/core/configs/styles/app_colors.dart';
-import 'package:stoblo/core/configs/styles/fonts/plus_jakarta_sans.dart';
-import 'package:stoblo/core/utils/helpers/validators.dart';
+import '../../core.dart';
+
 
 class CommonTextForm extends StatelessWidget {
   final Function(dynamic) onchange;

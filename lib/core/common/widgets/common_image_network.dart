@@ -1,8 +1,6 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:stoblo/core/common/widgets/custom_shimmer.dart';
-import 'package:stoblo/core/configs/styles/app_colors.dart';
+import '../../core.dart';
+
 
 class CommonImageNetwork extends StatelessWidget {
   const CommonImageNetwork(

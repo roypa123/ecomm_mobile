@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stoblo/core/configs/enums/loader_state_enums.dart';
-import 'package:stoblo/core/configs/styles/app_colors.dart';
-import 'package:stoblo/core/configs/styles/fonts/plus_jakarta_sans.dart';
+import '../../core.dart';
+
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({

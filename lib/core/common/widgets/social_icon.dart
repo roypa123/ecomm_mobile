@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:stoblo/core/configs/styles/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../core.dart';
 
 class SocialIcon extends StatelessWidget {
   final String imgUrl;

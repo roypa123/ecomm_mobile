@@ -1,6 +1,7 @@
-
-
 import 'dart:io';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import '../../core.dart';
 
 Future<bool> isInternetAvailable() async {
   try {

@@ -1,8 +1,5 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:stoblo/core/configs/styles/app_colors.dart';
-import 'package:stoblo/core/configs/styles/fonts/plus_jakarta_sans.dart';
+import '../../core.dart';
 
 class EmptyScreen extends StatelessWidget {
   const EmptyScreen({super.key});

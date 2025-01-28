@@ -1,6 +1,6 @@
-import 'package:ecomm_mobile/ecomm_app.dart';
-import 'package:ecomm_mobile/init_ecomm_app.dart';
 import 'package:flutter/material.dart';
+import 'ecomm_app.dart';
+import 'init_ecomm_app.dart';
 
 
 Future<void> main() async {

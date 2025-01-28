@@ -1,5 +1,5 @@
+import 'package:ecomm_mobile/core/core.dart';
 import 'package:flutter/material.dart';
-import 'package:stoblo/core/extensions/context_extensions.dart';
 
 class CommonLogo extends StatelessWidget {
   final String imgUrl;

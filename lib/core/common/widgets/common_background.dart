@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:stoblo/core/configs/styles/app_colors.dart';
+import '../../core.dart';
 
 class CommonBackground extends StatelessWidget {
   final Widget child;
