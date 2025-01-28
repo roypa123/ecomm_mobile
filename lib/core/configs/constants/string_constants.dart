@@ -1,4 +1,18 @@
 class Strings {
+  //------------------------------------
+
+
+
+
+  //-----------------------------------
+
+
+
+
+
+
+
+
   static const String logIn = "Log In";
   static const String login = "Login";
   static const String forgotPassword = "forgot password ?";

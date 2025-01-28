@@ -80,14 +80,4 @@ class AppVectors {
 
 
 
-
-
-
-
-
-
-
-
-
-
 }
