@@ -26,13 +26,13 @@ class RouteGenerator {
               child: const LoginScreen(),
             ));
 
-      // case RouteConstants.routeSignUp:
-      //   return _buildRoute(
-      //       RouteConstants.routeSignUp,
-      //       BlocProvider<AuthBloc>(
-      //         create: (_) => sl<AuthBloc>(),
-      //         child: const SignupScreen(),
-      //       ));
+      case RouteConstants.routeSignUpScreen:
+        return _buildRoute(
+            RouteConstants.routeSignUpScreen,
+            BlocProvider<AuthBloc>(
+              create: (_) => sl<AuthBloc>(),
+              child: const SignupScreen(),
+            ));
 
       default:
         return _buildRoute(RouteConstants.routeEmpty, const EmptyScreen());
