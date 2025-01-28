@@ -35,6 +35,18 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     SignUpEvent event,
     Emitter<AuthState> emit,
   ) async {
-    log(event.email);
+    // log(event.email);
+    final result = await _signUp(
+      SignUpParams(
+        email: event.email,
+        fullName: event.fullName,
+        password: event.password,
+      ),
+      
+    );
+    result.fold(
+      (failure){},
+      (_){},
+    );
   }
 }
