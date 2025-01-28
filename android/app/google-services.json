@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798327108777",
+    "project_id": "mobikul-ecommerce",
+    "storage_bucket": "mobikul-ecommerce.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798327108777:android:1e9ba86b736bd5621365b8",
+        "android_client_info": {
+          "package_name": "com.example.ecomm_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXZ-dBZ0nuCglsMe4uO8yuhz8e6U4UwuI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
