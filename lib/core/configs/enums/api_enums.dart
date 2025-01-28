@@ -1,0 +1,18 @@
+enum ApiErrorTypes {
+  connectionTimeout,
+  sendTimeout,
+  receiveTimeout,
+  badCertificate,
+  badResponse,
+  cancel,
+  connectionError,
+  unknown,
+  unAuthorized,
+  badRequest,
+  internalServerError,
+  serviceUnavailable,
+  notFound,
+  jsonParsing,
+  noInternet,
+  oops,
+}
