@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/core.dart';
 import '../../splash.dart';
 
@@ -29,13 +30,13 @@ class _SplashScreenState extends State<SplashScreen> {
           );
         }
       },
-      child: const Scaffold(
-        backgroundColor: Colors.white,
+      child:  Scaffold(
+        backgroundColor: AppColors.white,
         body: SizedBox(
           width: double.maxFinite,
           height: double.maxFinite,
           child: Center(
-            child: Text("Mobikul"),
+            child: SvgPicture.asset(AppVectors.svgLogo),
           ),
         ),
       ),

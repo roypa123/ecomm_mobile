@@ -2,6 +2,8 @@ class AppVectors {
   static const String basePath = 'assets/images/svg/';
   static const String format = '.svg';
 
+  static const String svgLogo = '${basePath}logo$format';
+
   static const String svgAccountsettingsicon = '${basePath}accountsettingsicon$format';
   static const String svgAppleicon = '${basePath}appleicon$format';
   static const String svgArrowDown = '${basePath}arrowDown$format';
