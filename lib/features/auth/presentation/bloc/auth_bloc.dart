@@ -4,18 +4,25 @@ import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../../core/core.dart';
+import '../../domain/usecases/sign_up.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  AuthBloc() : super(const AuthInitial()) {
+  AuthBloc({
+     required SignUp signUp,
+  }) : 
+  _signUp = signUp,
+  super(const AuthInitial()) {
     on<AuthEvent>((event, emit) {
       emit(const AuthLoading());
     });
     on<SignInEvent>(_emailSignInHandler);
     on<SignUpEvent>(_emailSignUpHandler);
   }
+
+  final SignUp _signUp;
 
   //---------Functions-------------------
 
