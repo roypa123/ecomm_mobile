@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset:false,
+      resizeToAvoidBottomInset: false,
       backgroundColor: AppColors.bodyBgLight,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
@@ -34,14 +34,14 @@ class _LoginScreenState extends State<LoginScreen> {
             25.verticalSpace,
             CommonTextForm(
               controller: emailController,
-              hintText: "Enter email",
+              hintText: Strings.enterEmail,
               type: TextInputFields.email,
             ),
             5.verticalSpace,
             CommonTextForm(
               controller: passwordController,
-              hintText: "Enter password",
-              type: TextInputFields.password,
+              hintText: Strings.enterPasssword,
+              type: TextInputFields.loginPassword,
             ),
             5.verticalSpace,
             Align(
@@ -55,7 +55,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             16.verticalSpace,
-            const PrimaryButton(),
+            PrimaryButton(
+              title: Strings.logIn,
+              onTap: () {},
+            ),
             30.verticalSpace,
             const Expanded(child: SizedBox()),
             const CommonDividerWidget(),
@@ -72,10 +75,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 GestureDetector(
                   onTap: () {
                     Navigator.pushNamedAndRemoveUntil(
-                          context,
-                          RouteConstants.routeSignUpScreen,
-                          (route) => false,
-                        );
+                      context,
+                      RouteConstants.routeSignUpScreen,
+                      (route) => false,
+                    );
                   },
                   child: Text(
                     Strings.signUp,

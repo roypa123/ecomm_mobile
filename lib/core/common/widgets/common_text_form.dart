@@ -34,36 +34,47 @@ class CommonTextForm extends StatelessWidget {
               validator: (value) {
                 if (type == TextInputFields.email) {
                   return Validators.validateEmail(value);
+                } else if (type == TextInputFields.confirmPassword) {
+                  return Validators.validateConfirmPassword(confirmText, value);
+                } else if (type == TextInputFields.loginPassword) {
+                  return Validators.validateLoginPassword(value);
+                } else if (type == TextInputFields.password) {
+                  return Validators.validateNewPassword(value);
+                } else if (type == TextInputFields.oldPassword) {
+                  return Validators.validateLoginPassword(value);
+                } else if (type == TextInputFields.changePassword &&
+                    confirmText != null) {
+                  return Validators.validateDoNotMatchPassword(
+                      confirmText, value);
+                } else if (type == TextInputFields.name) {
+                  return Validators.validateName(value);
                 }
                 return null;
               },
-              obscureText: type == TextInputFields.password,
+              obscureText:
+                  (type == TextInputFields.password && !isObscured.value) ||
+                      (type == TextInputFields.loginPassword &&
+                          !isObscured.value) ||
+                      (type == TextInputFields.confirmPassword &&
+                          !isObscured.value) ||
+                      (type == TextInputFields.oldPassword) ||
+                      (type == TextInputFields.changePassword),
               decoration: InputDecoration(
                 errorMaxLines: 4,
                 isDense: true,
                 hintText: hintText,
                 filled: true,
                 fillColor: AppColors.transparent,
-                // suffixIcon: type == TextInputFields.password ||
-                //         type == TextInputFields.loginPassword
-                //     ? GestureDetector(
-                //         onTap: () {
-                //           isObscured.value = !isObscured.value;
-                //         },
-                //         child: Padding(
-                //             padding: const EdgeInsets.all(12.0),
-                //             child: isOb
-                //                 ? SvgPicture.asset(AppVectors.svgEyeclosed,
-                //                     width: 16.w,
-                //                     height: 16.h,
-                //                     fit: BoxFit.contain)
-                //                 : SvgPicture.asset(AppVectors.svgEyeopen,
-                //                     width: 16.w,
-                //                     height: 16.h,
-                //                     fit: BoxFit.contain)),
-                //       )
-                //     : const SizedBox(),
-
+                suffixIcon: type == TextInputFields.password ||
+                        type == TextInputFields.loginPassword || type == TextInputFields.confirmPassword
+                    ? GestureDetector(
+                        onTap: () {
+                          isObscured.value = !isObscured.value;
+                        },
+                        child: Icon(
+                            isOb ? Icons.visibility_off : Icons.visibility),
+                      )
+                    : const SizedBox(),
                 errorBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0.r),
                     borderSide:
@@ -81,8 +92,7 @@ class CommonTextForm extends StatelessWidget {
                         BorderSide(color: AppColors.bodyBgDark, width: 1.w),
                     borderRadius: BorderRadius.circular(9.r)),
                 focusedErrorBorder: OutlineInputBorder(
-                    borderSide:
-                        BorderSide(color: AppColors.red, width: 1.w),
+                    borderSide: BorderSide(color: AppColors.red, width: 1.w),
                     borderRadius: BorderRadius.circular(9.r)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0.r),

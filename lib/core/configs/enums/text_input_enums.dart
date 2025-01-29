@@ -1,5 +1,12 @@
 enum TextInputFields {
+  name,
   email,
   password,
-  name,
+
+  loginPassword,
+  oldPassword,
+  changePassword,
+  confirmPassword
+
+ 
 }

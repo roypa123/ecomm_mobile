@@ -33,57 +33,73 @@ class _SignupScreenState extends State<SignupScreen> {
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
               width: double.maxFinite,
               height: double.maxFinite,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Expanded(child: SizedBox()),
-                  SvgPicture.asset(AppVectors.svgLogo),
-                  25.verticalSpace,
-                  CommonTextForm(
-                    controller: fullNameController,
-                    hintText: "Enter Full Name",
-                    type: TextInputFields.name,
-                  ),
-                  5.verticalSpace,
-                  CommonTextForm(
-                    controller: emailController,
-                    hintText: "Enter email",
-                    type: TextInputFields.email,
-                  ),
-                  5.verticalSpace,
-                  CommonTextForm(
-                    controller: passwordController,
-                    hintText: "Enter password",
-                    type: TextInputFields.password,
-                  ),
-                  5.verticalSpace,
-                  CommonTextForm(
-                    controller: confirmPasswordController,
-                    hintText: "Enter confirm password",
-                    type: TextInputFields.password,
-                  ),
-                  16.verticalSpace,
-                  const PrimaryButton(),
-                  30.verticalSpace,
-                  const Expanded(child: SizedBox()),
-                  const CommonDividerWidget(),
-                  30.verticalSpace,
-                  const SocialIconWidget(),
-                  50.verticalSpace,
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamedAndRemoveUntil(
-                        context,
-                        RouteConstants.routeLoginScreen,
-                        (route) => false,
-                      );
-                    },
-                    child: Text(
-                      Strings.logIn,
-                      style: RobotoPalette.fLink_14_400,
+              child: Form(
+                key: formKey,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Expanded(child: SizedBox()),
+                    SvgPicture.asset(AppVectors.svgLogo),
+                    25.verticalSpace,
+                    CommonTextForm(
+                      controller: fullNameController,
+                      hintText: Strings.enterFullName,
+                      type: TextInputFields.name,
                     ),
-                  ),
-                ],
+                    5.verticalSpace,
+                    CommonTextForm(
+                      controller: emailController,
+                      hintText: Strings.enterEmail,
+                      type: TextInputFields.email,
+                    ),
+                    5.verticalSpace,
+                    CommonTextForm(
+                      controller: passwordController,
+                      hintText: Strings.enterPasssword,
+                      type: TextInputFields.password,
+                    ),
+                    5.verticalSpace,
+                    CommonTextForm(
+                      controller: confirmPasswordController,
+                      hintText: Strings.enterConfirmPasssword,
+                      type: TextInputFields.confirmPassword,
+                    ),
+                    16.verticalSpace,
+                    PrimaryButton(
+                      title: Strings.signUp,
+                      onTap: () {
+                        if (formKey.currentState!.validate()) {
+                          context.read<AuthBloc>().add(
+                                SignUpEvent(
+                                  fullName: fullNameController.text.trim(),
+                                  email: emailController.text.trim(),
+                                  password: passwordController.text.trim(),
+                                ),
+                              );
+                        }
+                      },
+                    ),
+                    30.verticalSpace,
+                    const Expanded(child: SizedBox()),
+                    const CommonDividerWidget(),
+                    30.verticalSpace,
+                    const SocialIconWidget(),
+                    50.verticalSpace,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          RouteConstants.routeLoginScreen,
+                          (route) => false,
+                        );
+                      },
+                      child: Text(
+                        Strings.logIn,
+                        style: RobotoPalette.fLink_14_400,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           );

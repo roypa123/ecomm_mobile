@@ -19,9 +19,10 @@ class SignInEvent extends AuthEvent {
 
 class SignUpEvent extends AuthEvent {
   const SignUpEvent({
+    required this.fullName,
     required this.email,
     required this.password,
-    required this.fullName,
+    
   });
 
   final String email;
