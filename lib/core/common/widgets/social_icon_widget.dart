@@ -13,7 +13,7 @@ class SocialIconWidget extends StatelessWidget {
       width: 40.w,
       height: 40.w,
       decoration: const BoxDecoration(
-        color: AppColors.primaryColor, 
+        color: AppColors.primaryTextLight, 
         shape: BoxShape.circle,
       ),
       child: SvgPicture.asset(AppVectors.svgGoogleLogo),

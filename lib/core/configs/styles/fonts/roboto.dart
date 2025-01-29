@@ -6,41 +6,49 @@ class RobotoPalette {
   static const String robotoFamily = "Roboto";
 
   /*<---12--->*/
-  static TextStyle get fPrimary_12_400 => TextStyle(
+  static TextStyle get fPrimaryTextLight_12_400 => TextStyle(
       fontSize: 12.sp,
       fontWeight: FontWeight.w400,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
 
   /*<---14--->*/
-  static TextStyle get fPrimary_14_600 => TextStyle(
+  static TextStyle get fPrimaryTextLight_14_600 => TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w600,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
 
-  static TextStyle get fPrimary_24_700 => TextStyle(
+  static TextStyle get fPrimaryTextLight_14_700 => TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w700,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
 
-  static TextStyle get fPrimary_24_400 => TextStyle(
+  static TextStyle get fPrimaryTextLight_14_400 => TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
+
+   static TextStyle get fBodyBgLight_14_400 => TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      color: AppColors.bodyBgLight);
+
+  static TextStyle get fLink_14_400 => TextStyle(
+      fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.link);
 
 /*<---16--->*/
-  static TextStyle get fPrimary_16_400 => TextStyle(
+  static TextStyle get fPrimaryTextLight_16_400 => TextStyle(
       fontSize: 16.sp,
       fontWeight: FontWeight.w400,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
 
-  static TextStyle get fPrimary_16_700 => TextStyle(
+  static TextStyle get fPrimaryTextLight_16_700 => TextStyle(
       fontSize: 16.sp,
       fontWeight: FontWeight.w700,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
 
 /*<---20--->*/
   static TextStyle get fBlack_20_700 => TextStyle(
       fontSize: 20.sp,
       fontWeight: FontWeight.w700,
-      color: AppColors.primaryColor);
+      color: AppColors.primaryTextLight);
 }
