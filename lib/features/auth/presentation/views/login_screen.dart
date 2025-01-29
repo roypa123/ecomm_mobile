@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../core/common/widgets/common_app_bar.dart';
 import '../../../../core/common/widgets/common_text_form.dart';
 import '../../../../core/common/widgets/primary_button.dart';
 import '../../../../core/core.dart';
@@ -36,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: AppColors.bodyBgLight,
+        
         body: Container(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
           width: double.maxFinite,
