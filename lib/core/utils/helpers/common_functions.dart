@@ -20,8 +20,8 @@ void showToast({String? msg, bool? isError = true}) {
       msg: msg!,
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM,
-      //backgroundColor:  isError! ? AppColors.fd12828 :AppColors.f01e17b,
-      //textColor: isError ? AppColors.white : AppColors.black,
+      backgroundColor:  isError! ? AppColors.red :AppColors.green,
+      textColor: AppColors.white,
       fontSize: 14.sp);
 }
 

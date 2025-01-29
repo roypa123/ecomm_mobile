@@ -1,5 +1,6 @@
 import 'package:either_dart/either.dart';
 import '../../../../core/core.dart';
+import '../../domain/entities/user.dart';
 import '../../domain/repos/auth_repo.dart';
 import '../datasources/auth_remote_data_source.dart';
 
@@ -18,22 +19,22 @@ class AuthRepoImpl implements AuthRepo {
   //   }
   // }
 
-  // @override
-  // ResultFuture<LocalUser> signIn({
-  //   required String email,
-  //   required String password,
-  // }) async {
-  //   try {
-  //     final result = await _remoteDataSource.signIn(
-  //       email: email,
-  //       password: password,
-  //     );
+  @override
+  ResultFuture<LocalUser> signIn({
+    required String email,
+    required String password,
+  }) async {
+    try {
+      final result = await _remoteDataSource.signIn(
+        email: email,
+        password: password,
+      );
 
-  //     return Right(result);
-  //   } on ServerException catch (e) {
-  //     return Left(ServerFailure(message: e.message, statusCode: e.statusCode));
-  //   }
-  // }
+      return Right(result);
+    } on ServerException catch (e) {
+      return Left(ServerFailure(message: e.message, statusCode: e.statusCode));
+    }
+  }
 
   @override
   ResultFuture<void> signUp({

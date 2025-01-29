@@ -25,3 +25,16 @@ class SignedIn extends AuthState {
   @override
   List<Object> get props => [loaderState, isFormValid];
 }
+
+class SignUpNavigate extends AuthState {}
+
+class LogInNavigate extends AuthState {}
+
+class AuthError extends AuthState {
+  const AuthError(this.message);
+
+  final String message;
+
+  @override
+  List<String> get props => [message];
+}
