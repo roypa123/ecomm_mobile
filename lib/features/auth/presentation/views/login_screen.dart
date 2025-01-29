@@ -21,6 +21,7 @@ class LoginScreen extends StatelessWidget {
             25.verticalSpace,
             Text("I have forgotten my password"),
             16.verticalSpace,
+            
             GestureDetector(
               onTap:(){
 

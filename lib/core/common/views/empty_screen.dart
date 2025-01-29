@@ -11,7 +11,7 @@ class EmptyScreen extends StatelessWidget {
       body: Center(
         child: Text(
           'NO ROUTE FOUND !',
-          style: RobotoPalette.fBlack_24_400,
+          style: RobotoPalette.fPrimary_16_400,
         ),
       ),
     );

@@ -11,7 +11,7 @@ class CommonDividerWidget extends StatelessWidget {
     return Container(
               width: double.maxFinite,
               height: 1.h,
-              color: AppColors.fd5d5df,
+              color: AppColors.strokeLight,
             );
   }
 }
