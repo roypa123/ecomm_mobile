@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../core/core.dart';
 import '../bloc/auth_bloc.dart';
@@ -14,23 +16,30 @@ class SignupScreen extends StatelessWidget {
         builder: (context, state) {
           return Scaffold(
             backgroundColor: AppColors.white,
-            body: SizedBox(
+            body: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 20.h),
               width: double.maxFinite,
               height: double.maxFinite,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      context.read<AuthBloc>().add(
-                            const SignUpEvent(
-                                email: "roypa81130@gmail.com",
-                                password: "Aa@12345678",
-                                fullName: "Roy P A"),
-                          );
-                    },
-                    child: const Text("hello"),
-                  ),
+                  SvgPicture.asset(AppVectors.svgLogo),
+                  25.verticalSpace,
+
+
+
+
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     context.read<AuthBloc>().add(
+                  //           const SignUpEvent(
+                  //               email: "roypa81130@gmail.com",
+                  //               password: "Aa@12345678",
+                  //               fullName: "Roy P A"),
+                  //         );
+                  //   },
+                  //   child: const Text("hello"),
+                  // ),
                 ],
               ),
             ),

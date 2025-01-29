@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if (state is SplashNavigate) {
           Navigator.pushNamedAndRemoveUntil(
             context,
-            RouteConstants.routeSignUpScreen,
+            RouteConstants.routeLoginScreen,
             (route) => false,
           );
         }
