@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (state is LogInNavigate) {
           Navigator.pushNamedAndRemoveUntil(
             context,
-            RouteConstants.routeSignUpScreen,
+            RouteConstants.routeHomeScreen,
             (route) => false,
           );
         } else if (state is AuthError) {
@@ -78,7 +76,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 PrimaryButton(
                   title: Strings.logIn,
                   onTap: () {
-                     log("signup");
                       if (formKey.currentState!.validate()) {
                         context.read<AuthBloc>().add(
                               SignInEvent(

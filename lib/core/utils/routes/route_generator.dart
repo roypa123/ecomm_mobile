@@ -34,6 +34,11 @@ class RouteGenerator {
               child: const SignupScreen(),
             ));
 
+      case RouteConstants.routeHomeScreen:
+        return _buildRoute(
+            RouteConstants.routeHomeScreen,
+            const HomeScreen());
+
       default:
         return _buildRoute(RouteConstants.routeEmpty, const EmptyScreen());
     }
