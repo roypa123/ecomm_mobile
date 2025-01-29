@@ -9,9 +9,13 @@ class SocialIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      width: 54.w,
-      height: 54.w,
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
+      width: 40.w,
+      height: 40.w,
+      decoration: const BoxDecoration(
+        color: AppColors.primaryColor, 
+        shape: BoxShape.circle,
+      ),
       child: SvgPicture.asset(AppVectors.svgGoogleLogo),
     );
   }

@@ -28,17 +28,24 @@ class LoginScreen extends StatelessWidget {
               child: Container(
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 20.w,vertical: 15.h),
-                color: Color(0XFF282C3F),
+                color: AppColors.primaryColor,
                 child: Text("LOGIN",style: TextStyle(color: Colors.white),),
               ),
             ),
             16.verticalSpace,
-            Container(
-              width: double.maxFinite,
-              height: 1.h,
-              color: Colors.red,
-            ),
-            SocialIconWidget()
+            const CommonDividerWidget(), 
+            30.verticalSpace,
+            const SocialIconWidget(),
+            50.verticalSpace,
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account yet?"),
+                Text(" Sign-up"),
+                Text("now"),
+              ],
+            )
+
 
 
           ],
