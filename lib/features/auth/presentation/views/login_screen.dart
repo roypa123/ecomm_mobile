@@ -70,7 +70,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   style: RobotoPalette.fPrimaryTextLight_14_400,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          RouteConstants.routeSignUpScreen,
+                          (route) => false,
+                        );
+                  },
                   child: Text(
                     Strings.signUp,
                     style: RobotoPalette.fLink_14_400,
