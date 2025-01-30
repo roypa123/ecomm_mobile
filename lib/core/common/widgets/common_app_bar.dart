@@ -21,6 +21,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.white,
       title: Text(
         title ?? "",
+        style: RobotoPalette.fPrimaryTextLight_16_400,
       ),
       centerTitle: false,
       leadingWidth: 65.w,

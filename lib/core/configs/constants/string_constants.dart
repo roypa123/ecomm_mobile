@@ -9,7 +9,8 @@ class Strings {
   static const String enterPasssword = "Enter password";
   static const String enterConfirmPasssword = "Enter confirm password";
   static const String enterFullName = "Enter Full Name";
+  static const String wishlist = "Wishlist";
+  static const String products = "Products";
 
-  
-  
+   
 }

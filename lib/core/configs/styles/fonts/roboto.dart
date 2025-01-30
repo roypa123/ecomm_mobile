@@ -47,7 +47,7 @@ class RobotoPalette {
       color: AppColors.primaryTextLight);
 
 /*<---20--->*/
-  static TextStyle get fBlack_20_700 => TextStyle(
+  static TextStyle get fPrimaryTextLight_20_700 => TextStyle(
       fontSize: 20.sp,
       fontWeight: FontWeight.w700,
       color: AppColors.primaryTextLight);
