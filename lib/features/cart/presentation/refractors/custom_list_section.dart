@@ -22,35 +22,123 @@ class CustomListSection extends StatelessWidget {
           return SizedBox(
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Column(
-                      children: [
-                        const Text("\$799.0"),
-                        5.verticalSpace,
-                        const Text(
-                            "iPhone 13 Pro Max(15th Gen) - 256 gb Midnight Black"),
-                        5.verticalSpace,
-                        Row(
+                Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 20.w, vertical: 1.h),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 1,
+                        child: SizedBox(
+                          width: 150.w,
+                          height: 150.h,
+                          child: Image.asset(AppImages.pngMobile2),
+                        ),
+                      ),
+                      10.horizontalSpace,
+                      Expanded(
+                        flex: 2,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text("Sub Total: "),
-                            5.horizontalSpace,
-                            const Text("\$799.0")
+                            Text(
+                              "\$799.0",
+                              style: RobotoPalette.fPrimaryTextLight_16_700,
+                            ),
+                            5.verticalSpace,
+                            Text(
+                              "iPhone 13 Pro Max(15th Gen) - 256 gb Midnight Black",
+                              style: RobotoPalette.fPrimaryTextLight_16_400,
+                            ),
+                            10.verticalSpace,
+                            Row(
+                              children: [
+                                Text("Sub Total: ",
+                                    style:
+                                        RobotoPalette.fPrimaryTextLight_14_700),
+                                5.horizontalSpace,
+                                Text("\$799.0",
+                                    style:
+                                        RobotoPalette.fPrimaryTextLight_14_400)
+                              ],
+                            )
                           ],
-                        )
-                      ],
-                    )
-                  ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 0),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
+                      height: 45.h,
+                      width: 100.w,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: AppColors.black,
+                          width: 1.5,
+                        ),
+                        borderRadius: BorderRadius.circular(4.r),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GestureDetector(
+                            onTap: () {},
+                            child: const Icon(Icons.remove),
+                          ),
+                          10.horizontalSpace,
+                          Text("1",style: RobotoPalette.fPrimaryTextLight_14_700,),
+                          10.horizontalSpace,
+                          GestureDetector(
+                            onTap: () {},
+                            child: const Icon(Icons.add),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                15.verticalSpace,
                 Container(
                   color: AppColors.strokeLight,
-                  child: 1.verticalSpace,
+                  height: 1.h,
+                  width: double.maxFinite,
                 ),
                 Row(
                   children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: Text("Remove Item"),
+                    Expanded(
+                      flex: 1,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20.h, horizontal: 20.w),
+                          child: const Center(
+                            child: Text(Strings.removeItem),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      color: AppColors.strokeLight,
+                      width: 1.w,
+                      height: 55.h,
+                    ),
+                    Expanded(
+                      flex: 1,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 20.h, horizontal: 20.w),
+                          child: const Center(
+                            child: Text(Strings.moveToWishList),
+                          ),
+                        ),
+                      ),
                     )
                   ],
                 )

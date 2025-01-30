@@ -29,7 +29,7 @@ class _CartScreenState extends State<CartScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.h,horizontal: 20.w),
+              padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
               child: Align(
                 alignment: Alignment.topLeft,
                 child: Text(
@@ -40,8 +40,12 @@ class _CartScreenState extends State<CartScreen> {
             ),
             5.verticalSpace,
             const CustomListSection(),
-            5.verticalSpace,
-            const CustomEndSection()
+            Container(
+              color: AppColors.seperatorLight,
+              height: 5.h,
+              width: double.maxFinite,
+            ),
+             CustomEndSection()
           ],
         ),
       ),

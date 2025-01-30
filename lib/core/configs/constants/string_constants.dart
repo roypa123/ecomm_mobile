@@ -15,4 +15,11 @@ class Strings {
   static const String items = "Items";
   static const String proceedToCheckout = "PROCEED TO CHECKOUT";
   static const String discountCoupon = "Discount Coupon";
+  static const String removeItem = "Remove Item";
+  static const String moveToWishList = "Move to Wishlist";
+
+  
+
+
+  
 }
