@@ -11,6 +11,8 @@ class Strings {
   static const String enterFullName = "Enter Full Name";
   static const String wishlist = "Wishlist";
   static const String products = "Products";
-
-   
+  static const String cart = "Cart";
+  static const String items = "Items";
+  static const String proceedToCheckout = "PROCEED TO CHECKOUT";
+  static const String discountCoupon = "Discount Coupon";
 }

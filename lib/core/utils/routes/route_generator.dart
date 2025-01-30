@@ -35,14 +35,15 @@ class RouteGenerator {
             ));
 
       case RouteConstants.routeHomeScreen:
-        return _buildRoute(
-            RouteConstants.routeHomeScreen,
-            const HomeScreen());
+        return _buildRoute(RouteConstants.routeHomeScreen, const HomeScreen());
 
       case RouteConstants.routeWishListScreen:
         return _buildRoute(
-            RouteConstants.routeWishListScreen,
-            const WishlistScreen());
+            RouteConstants.routeWishListScreen, const WishlistScreen());
+
+      case RouteConstants.routeCartScreen  :
+        return _buildRoute(
+            RouteConstants.routeCartScreen, const CartScreen());
 
       default:
         return _buildRoute(RouteConstants.routeEmpty, const EmptyScreen());

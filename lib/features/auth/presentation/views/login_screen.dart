@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
         if (state is LogInNavigate) {
           Navigator.pushNamedAndRemoveUntil(
             context,
-            RouteConstants.routeWishListScreen,
+            RouteConstants.routeCartScreen,
             (route) => false,
           );
         } else if (state is AuthError) {
