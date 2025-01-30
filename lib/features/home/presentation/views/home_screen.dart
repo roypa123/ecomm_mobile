@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColors.bodyBgLight,
       appBar: const CommonAppBar(
-        leadingButton: true,
+        menuButton: true,
         title: "Mobikul",
       ),
       body: Container(

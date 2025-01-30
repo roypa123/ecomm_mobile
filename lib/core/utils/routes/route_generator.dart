@@ -39,6 +39,11 @@ class RouteGenerator {
             RouteConstants.routeHomeScreen,
             const HomeScreen());
 
+      case RouteConstants.routeWishListScreen:
+        return _buildRoute(
+            RouteConstants.routeWishListScreen,
+            const WishlistScreen());
+
       default:
         return _buildRoute(RouteConstants.routeEmpty, const EmptyScreen());
     }

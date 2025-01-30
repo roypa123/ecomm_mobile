@@ -5,13 +5,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
-  final bool? leadingButton;
+  final bool? menuButton;
   final bool? trailingButton;
   final Function? profileDeleteFunction;
   const CommonAppBar(
       {super.key,
       this.title,
-      this.leadingButton,
+      this.menuButton,
       this.trailingButton,
       this.profileDeleteFunction});
 
@@ -24,7 +24,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       centerTitle: false,
       leadingWidth: 65.w,
-      leading: (leadingButton ?? false)
+      leading: (menuButton ?? false)
           ? GestureDetector(
               onTap: () => Navigator.pop(context),
               child: Container(
@@ -34,7 +34,15 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
                 child: SvgPicture.asset(AppVectors.svgMenu),
               ),
             )
-          : null,
+          : GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(
+                padding: EdgeInsets.all(12.w),
+                width: 40.w,
+                height: 40.h,
+                child: const Icon(Icons.arrow_back),
+              ),
+            ),
       actions: [
         GestureDetector(
           onTap: () {},

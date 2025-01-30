@@ -9,6 +9,7 @@ class AppVectors {
   static const String svgSearch = '${basePath}search$format';
   static const String svgWishlist = '${basePath}wishlist$format';
   static const String svgMenu = '${basePath}menu$format';
+  static const String svgListView = '${basePath}list_view$format';
 
 
 

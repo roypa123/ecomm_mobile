@@ -4,5 +4,6 @@ import '../../../features/auth/auth.dart';
 import '../../../features/auth/presentation/bloc/auth_bloc.dart';
 import '../../../features/home/home.dart';
 import '../../../features/splash/splash.dart';
+import '../../../features/wishlist/presentation/views/wishlist_screen.dart';
 import '../../core.dart';
 part 'route_generator.dart';
