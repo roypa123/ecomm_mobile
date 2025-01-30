@@ -51,7 +51,36 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
             padding: EdgeInsets.all(8.w),
             width: 40.w,
             height: 40.h,
-            child: SvgPicture.asset(AppVectors.svgBell),
+            child: Stack(
+              children: [
+                SizedBox(
+                  width: 40.w,
+                  height: 40.h,
+                  child: SvgPicture.asset(AppVectors.svgBell),
+                ),
+                Positioned(
+                  top: 0.h,
+                  right: 1.w,
+                  child: Container(
+                    width: 12.w,
+                    height: 12.w,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.red,
+                    ),
+                    child: Center(
+                      child: Text(
+                        "1",
+                        style: TextStyle(
+                          color: AppColors.white,
+                          fontSize: 7.sp,
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         GestureDetector(
@@ -85,8 +114,16 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       bottom: PreferredSize(
         preferredSize: preferredSize,
         child: Container(
-          color: Colors.black,
-          height: 2.0,
+          height: 1.0,
+          decoration: BoxDecoration(
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.black.withOpacity(0.5),
+                blurRadius: 0.1,
+                offset: const Offset(0, 1),
+              ),
+            ],
+          ),
         ),
       ),
     );

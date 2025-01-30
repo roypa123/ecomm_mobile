@@ -27,7 +27,15 @@ class RobotoPalette {
       fontWeight: FontWeight.w400,
       color: AppColors.primaryTextLight);
 
-   static TextStyle get fBodyBgLight_14_400 => TextStyle(
+  static TextStyle get fSecondaryText_14_400 => TextStyle(
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      decoration: TextDecoration.lineThrough, 
+      decorationColor: AppColors.secondaryText,
+      decorationThickness: 1.8.h,
+      color: AppColors.secondaryText);
+
+  static TextStyle get fBodyBgLight_14_400 => TextStyle(
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: AppColors.bodyBgLight);
