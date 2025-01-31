@@ -18,6 +18,22 @@ class Strings {
   static const String removeItem = "Remove Item";
   static const String moveToWishList = "Move to Wishlist";
 
+
+  static const String addCategories = "Add Categories";
+  static const String enterCategory = "Enter Category ";
+  static const String exampleElectronics = "Eg: Electronics";
+  static const String asterik = "*";
+  static const String enterSubCategory = "Enter Sub-Category ";
+  static const String entertype = "Enter Type ";
+  static const String egPhone = "Eg: Phone";
+  static const String egNokia = "Eg: Nokia";
+  static const String submit = "Submit";
+
+
+
+  
+  
+
   
 
 

@@ -35,9 +35,9 @@ class RobotoPalette {
       decorationThickness: 1.8.h,
       color: AppColors.secondaryText);
 
-  static TextStyle get fBodyBgLight_14_400 => TextStyle(
+  static TextStyle get fBodyBgLight_14_700 => TextStyle(
       fontSize: 14.sp,
-      fontWeight: FontWeight.w400,
+      fontWeight: FontWeight.w700,
       color: AppColors.bodyBgLight);
 
   static TextStyle get fLink_14_400 => TextStyle(

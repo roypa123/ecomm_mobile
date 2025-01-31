@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
             5.horizontalSpace,
             Text(
               title,
-              style: RobotoPalette.fBodyBgLight_14_400,
+              style: RobotoPalette.fBodyBgLight_14_700,
             ),
           ],
         ),

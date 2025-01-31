@@ -22,7 +22,7 @@ class PrimaryButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: RobotoPalette.fBodyBgLight_14_400,
+            style: RobotoPalette.fBodyBgLight_14_700,
           ),
         ),
       ),

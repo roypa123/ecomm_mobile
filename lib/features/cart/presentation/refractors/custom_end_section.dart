@@ -44,7 +44,7 @@ class CustomEndSection extends StatelessWidget {
                       child: Center(
                           child: Text(
                         "APPLY",
-                        style: RobotoPalette.fBodyBgLight_14_400,
+                        style: RobotoPalette.fBodyBgLight_14_700,
                       )),
                     ),
                   )

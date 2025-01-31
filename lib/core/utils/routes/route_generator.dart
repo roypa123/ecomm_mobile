@@ -55,7 +55,7 @@ class RouteGenerator {
       case RouteConstants.routeAddProductScreen:
         return _buildRoute(
           RouteConstants.routeAddProductScreen,
-          const AddProductScreen(),
+          const AddCategoriesScreen(),
         );
 
       default:

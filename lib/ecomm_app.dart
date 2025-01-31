@@ -15,7 +15,7 @@ class EcommApp extends StatelessWidget {
         title: AppConstants.appName,
         navigatorKey: navigatorKey,
         onGenerateRoute: RouteGenerator.generateRoute,
-        initialRoute: RouteConstants.routeHomeScreen,
+        initialRoute: RouteConstants.routeAddProductScreen,
         theme: AppTheme.themeData,
         debugShowCheckedModeBanner: false,
         builder: (context, child) {

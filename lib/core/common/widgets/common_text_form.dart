@@ -31,6 +31,7 @@ class CommonTextForm extends StatelessWidget {
               autovalidateMode: AutovalidateMode.onUserInteraction,
               controller: controller,
               style: RobotoPalette.fPrimaryTextLight_14_400,
+              
               validator: (value) {
                 if (type == TextInputFields.email) {
                   return Validators.validateEmail(value);
@@ -60,6 +61,7 @@ class CommonTextForm extends StatelessWidget {
                       (type == TextInputFields.oldPassword) ||
                       (type == TextInputFields.changePassword),
               decoration: InputDecoration(
+                hintStyle: RobotoPalette.fPrimaryTextLight_14_400.copyWith(color: AppColors.secondaryText),
                 errorMaxLines: 4,
                 isDense: true,
                 hintText: hintText,
