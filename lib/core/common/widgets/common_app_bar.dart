@@ -27,7 +27,7 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       leadingWidth: 65.w,
       leading: (menuButton ?? false)
           ? GestureDetector(
-              onTap: () => Navigator.pop(context),
+              onTap: () =>  Scaffold.of(context).openDrawer(),
               child: Container(
                 padding: EdgeInsets.all(12.w),
                 width: 40.w,
