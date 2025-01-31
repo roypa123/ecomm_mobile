@@ -11,7 +11,8 @@ class EmptyScreen extends StatelessWidget {
       body: Center(
         child: Text(
           'NO ROUTE FOUND !',
-          style: RobotoPalette.fPrimaryTextLight_14_600,
+          style: RobotoPalette.fPrimaryTextLight_14_600
+              .copyWith(color: AppColors.white),
         ),
       ),
     );
