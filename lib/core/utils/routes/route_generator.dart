@@ -52,11 +52,13 @@ class RouteGenerator {
           const CartScreen(),
         );
 
-      case RouteConstants.routeAddProductScreen:
+      case RouteConstants.routeAddCategoriesScreen:
         return _buildRoute(
-          RouteConstants.routeAddProductScreen,
-          const AddCategoriesScreen(),
-        );
+            RouteConstants.routeAddCategoriesScreen,
+            BlocProvider<AddCategoriesBloc>(
+              create: (_) => sl<AddCategoriesBloc>(),
+              child: const AddCategoriesScreen(),
+            ));
 
       default:
         return _buildRoute(RouteConstants.routeEmpty, const EmptyScreen());

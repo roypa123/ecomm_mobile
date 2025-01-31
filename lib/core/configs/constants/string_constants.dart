@@ -28,6 +28,10 @@ class Strings {
   static const String egPhone = "Eg: Phone";
   static const String egNokia = "Eg: Nokia";
   static const String submit = "Submit";
+  static const String detailsSuccessfullyAdded = " Details Successfully Added";
+
+
+ 
 
 
 
