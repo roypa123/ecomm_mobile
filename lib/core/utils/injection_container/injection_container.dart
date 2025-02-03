@@ -3,6 +3,12 @@ import 'package:ecomm_mobile/features/add_categories/presentation/bloc/add_categ
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
+import '../../../features/add_categories/data/datasources/add_categores_remote_data_source.dart';
+import '../../../features/add_categories/data/repos/add_categories_repo_impl.dart';
+import '../../../features/add_categories/domain/repos/add_categories_repo.dart';
+import '../../../features/add_categories/domain/usecases/add_category_usecase.dart';
+import '../../../features/add_categories/domain/usecases/add_subcategory_usecase.dart';
+import '../../../features/add_categories/domain/usecases/add_type_usecase.dart';
 import '../../../features/auth/data/datasources/auth_remote_data_source.dart';
 import '../../../features/auth/data/repos/auth_repo_impl.dart';
 import '../../../features/auth/domain/repos/auth_repo.dart';

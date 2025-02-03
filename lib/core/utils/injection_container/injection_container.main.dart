@@ -32,9 +32,26 @@ Future<void> _initAuth() async {
 }
 
 Future<void> _initAddCategories() async {
-  sl.registerFactory(
-    () => AddCategoriesBloc(),
-  );
+  sl
+    ..registerFactory(
+      () => AddCategoriesBloc(
+        addCategoryUsecase: sl(),
+        addSubCategoryUsecase: sl(),
+        addTypeUsecase: sl(),
+      ),
+    )
+    ..registerLazySingleton(() => AddCategoriesUseCase(sl()))
+    ..registerLazySingleton(() => AddSubcategoryUsecase(sl()))
+    ..registerLazySingleton(() => AddTypesUseCase(sl()))
+    ..registerLazySingleton<AddCategoriesRepo>(
+        () => AddCategoriesRepoImpl(sl()))
+    ..registerLazySingleton<AddCategoriesRemoteDataSource>(
+      () => AddCategoresRemoteDataSourceImpl(
+          authClient: sl(), cloudStoreClient: sl(), dbClient: sl()),
+    );
+    // ..registerLazySingleton(() => FirebaseAuth.instance)
+    // ..registerLazySingleton(() => FirebaseFirestore.instance)
+    // ..registerLazySingleton(() => FirebaseStorage.instance);
 }
 
 Future<void> initiliazeObjects() async {
