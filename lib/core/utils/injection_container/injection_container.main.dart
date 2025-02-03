@@ -15,43 +15,15 @@ Future<void> _initSplash() async {
 }
 
 Future<void> _initAuth() async {
-  sl
-    ..registerFactory(
-      () => AuthBloc(signUp: sl(), signIn: sl()),
-    )
-    ..registerLazySingleton(() => SignUp(sl()))
-    ..registerLazySingleton(() => SignIn(sl()))
-    ..registerLazySingleton<AuthRepo>(() => AuthRepoImpl(sl()))
-    ..registerLazySingleton<AuthRemoteDataSource>(
-      () => AuthRemoteDataSourceImpl(
-          authClient: sl(), cloudStoreClient: sl(), dbClient: sl()),
-    )
-    ..registerLazySingleton(() => FirebaseAuth.instance)
-    ..registerLazySingleton(() => FirebaseFirestore.instance)
-    ..registerLazySingleton(() => FirebaseStorage.instance);
+  sl.registerFactory(
+    () => AuthBloc(),
+  );
 }
 
 Future<void> _initAddCategories() async {
-  sl
-    ..registerFactory(
-      () => AddCategoriesBloc(
-        addCategoryUsecase: sl(),
-        addSubCategoryUsecase: sl(),
-        addTypeUsecase: sl(),
-      ),
-    )
-    ..registerLazySingleton(() => AddCategoriesUseCase(sl()))
-    ..registerLazySingleton(() => AddSubcategoryUsecase(sl()))
-    ..registerLazySingleton(() => AddTypesUseCase(sl()))
-    ..registerLazySingleton<AddCategoriesRepo>(
-        () => AddCategoriesRepoImpl(sl()))
-    ..registerLazySingleton<AddCategoriesRemoteDataSource>(
-      () => AddCategoresRemoteDataSourceImpl(
-          authClient: sl(), cloudStoreClient: sl(), dbClient: sl()),
-    );
-    // ..registerLazySingleton(() => FirebaseAuth.instance)
-    // ..registerLazySingleton(() => FirebaseFirestore.instance)
-    // ..registerLazySingleton(() => FirebaseStorage.instance);
+  sl.registerFactory(
+    () => AddCategoriesBloc(),
+  );
 }
 
 Future<void> initiliazeObjects() async {

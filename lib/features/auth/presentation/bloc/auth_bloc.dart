@@ -8,12 +8,7 @@ part 'auth_event.dart';
 part 'auth_state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  AuthBloc({
-     required SignUp signUp,
-     required SignIn signIn,
-  }) : 
-  _signIn = signIn,
-  _signUp = signUp,
+  AuthBloc() : 
   super(const AuthInitial()) {
     on<AuthEvent>((event, emit) {
       emit(const AuthLoading());
@@ -22,8 +17,6 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     on<SignUpEvent>(_emailSignUpHandler);
   }
 
-  final SignUp _signUp;
-  final SignIn _signIn;
 
   //---------Functions-------------------
 
@@ -31,33 +24,33 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     SignInEvent event,
     Emitter<AuthState> emit,
   ) async {
-    final result = await _signIn(
-      SignInParams(
-        email: event.email,
-        password: event.password,
-      ),
-    );
-    result.fold(
-      (failure) => emit(AuthError(failure.errorMessage)),
-      (user) => emit(LogInNavigate()),
-    );
+    // final result = await _signIn(
+    //   SignInParams(
+    //     email: event.email,
+    //     password: event.password,
+    //   ),
+    // );
+    // result.fold(
+    //   (failure) => emit(AuthError(failure.errorMessage)),
+    //   (user) => emit(LogInNavigate()),
+    // );
   }
 
    Future<void> _emailSignUpHandler(
     SignUpEvent event,
     Emitter<AuthState> emit,
   ) async {
-    final result = await _signUp(
-      SignUpParams(
-        email: event.email,
-        fullName: event.fullName,
-        password: event.password,
-      ),
+    // final result = await _signUp(
+    //   SignUpParams(
+    //     email: event.email,
+    //     fullName: event.fullName,
+    //     password: event.password,
+    //   ),
       
-    );
-    result.fold(
-      (failure)=> emit(AuthError(failure.errorMessage)) ,
-      (_)=>emit(SignUpNavigate())
-    );
+    // );
+    // result.fold(
+    //   (failure)=> emit(AuthError(failure.errorMessage)) ,
+    //   (_)=>emit(SignUpNavigate())
+    // );
   }
 }
