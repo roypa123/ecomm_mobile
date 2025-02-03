@@ -1,11 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecomm_mobile/features/add_categories/presentation/bloc/add_categories_bloc.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
-import '../../../features/auth/domain/repos/auth_repo.dart';
-import '../../../features/auth/domain/usecases/sign_in.dart';
-import '../../../features/auth/domain/usecases/sign_up.dart';
 import '../../../features/auth/presentation/bloc/auth_bloc.dart';
 import '../../../features/splash/splash.dart';
 

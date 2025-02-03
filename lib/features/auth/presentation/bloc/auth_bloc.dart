@@ -1,8 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import '../../../../core/core.dart';
-import '../../domain/usecases/sign_in.dart';
-import '../../domain/usecases/sign_up.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
